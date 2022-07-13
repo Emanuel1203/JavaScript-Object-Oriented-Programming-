@@ -1,0 +1,86 @@
+//Exersise1
+class Person{
+    constructor( name, pets , residence , hobbies){
+    this.name = name;
+    this.pets = pets;
+    this.residence = residence;
+    this.hobbies = hobbies;
+    }
+addHobby(hobby){
+ this.hobbies.push(hobby);
+}
+removeHobby(hobby){
+let foundIdx = this.hobbies.indexOf(rmHobby);
+this.hobbies.splice(foundIdx, 1);
+} 
+greeting(){
+    console.log("Hello Fellow Person!")
+}
+toString() {
+    return Object.values(this).toString();
+}
+}
+//exersise 2
+class Coder extends Person {
+    constructor (name, pets, residence, hobbies, occupation){
+        super(name, pets, residence, hobbies);
+
+        this.occupation = occupation;
+    }
+    greeting() {
+        console.log("Hello, I am a coder!")
+    }
+}
+//excersise 3
+let coder = New Coder(
+    "Ben",
+    0,
+    "Birmingham"
+    ["running", "diy", "reading"]
+    "Full Stack Web Developer"
+);
+coder.addHobby("fencing");
+
+console.log(coder);
+
+coder.removeHobby("diy");
+
+console.log(coder);
+
+coder.greeting()
+
+//exersise 4
+class Calculator {
+    result = 0;
+    constructor(){
+        this.result = 0;
+    }
+    add(a, b) {
+        this.result = a + b;
+        return this.result;
+    }
+    subtract(a ,b){
+        this.result = a - b;
+        return this.result;
+    }
+    multiply(a ,b){
+        this.result = a * b;
+        return this.result;
+    }
+    divide(a ,b){
+        this.result = a / b;
+        return this.result
+    }
+    display() {
+        console.log(this.result);
+    }
+}
+let calc = new Calculator();
+calc.add(0, 1)
+calc.display()
+calc.subtract(5, 3)
+calc.display()
+calc.multiply(1, 3)
+calc.display()
+calc.divide(8, 2)
+calc.display()
